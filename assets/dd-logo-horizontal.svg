@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 100" role="img" aria-labelledby="title">
+<title id="title">D&amp;D Transformers</title>
+<g fill="#ECEEE9">
+  <path fill-rule="evenodd" d="M10 0H22A50 50 0 0 1 22 100H10ZM22 12A38 38 0 0 1 22 88Z"/>
+  <g transform="translate(148)"><path fill-rule="evenodd" d="M0 0H12A50 50 0 0 1 12 100H0ZM12 12A38 38 0 0 1 12 88Z"/></g>
+</g>
+<text x="110" y="52" text-anchor="middle" dominant-baseline="central" font-family="Instrument Serif, Georgia, serif" font-style="italic" font-size="78" fill="#B9CFAD">&amp;</text>
+<line x1="252" y1="22" x2="252" y2="78" stroke="#B9CFAD" stroke-width="1" opacity=".5"/>
+<text x="286" y="57" font-family="DM Mono, Menlo, monospace" font-size="14" letter-spacing="9" fill="#ECEEE9">TRANSFORMERS</text>
+</svg>
