@@ -215,3 +215,9 @@ header nav{justify-self:center}
 #menu:hover{background:var(--acid);border-color:var(--acid);color:var(--ink)}
 @media(max-width:850px){header{height:68px;padding:0 5vw;grid-template-columns:1fr max-content;column-gap:18px}header>a.brand{gap:13px}#menu{position:static;width:auto;min-height:0;padding:11px 14px;display:inline-flex}.header-contact{display:none}}
 @media(max-width:560px){header>a.brand{gap:11px}header b{font-size:22px}header small{font-size:7px;letter-spacing:.2em}#menu{padding:10px 12px;font-size:8px}}
+
+
+/* Optical size correction: the distribution transformer photo has more empty
+   space around the unit, so enlarge only that image within its existing frame. */
+.product-row > .product-image:nth-child(3) img{transform:scale(1.28);transform-origin:center center}
+.product-row:hover > .product-image:nth-child(3).loaded img{transform:scale(1.31)}
