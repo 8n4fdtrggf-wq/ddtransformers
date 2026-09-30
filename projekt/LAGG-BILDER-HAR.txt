@@ -1,0 +1,2 @@
+Lägg projektbilder i den här mappen.
+Se LAGG-TILL-PROJEKT.md för instruktioner.

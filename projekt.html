@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#F5F4F1">
+<meta name="color-scheme" content="light">
+<meta name="format-detection" content="telephone=no">
+<title>Projekt · D&amp;D Transformers</title>
+<meta name="description" content="Projekt och leveranser från D&amp;D Transformers, Åkersberga.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2314171A'/%3E%3Crect x='3' y='3' width='26' height='26' fill='none' stroke='%23B87333' stroke-width='2'/%3E%3Ctext x='16' y='21' font-family='Arial' font-weight='700' font-size='11' fill='%23F5F4F1' text-anchor='middle'%3ED%26amp;D%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: undersida till startsidan. Samma tokens. Varje projekt är ett leveransblad: bild 5/12, data och text 7/12. */
+:root{
+  color-scheme: light;
+  --paper:#F5F4F1;
+  --steel:#E8E6E1;
+  --ink:#14171A;
+  --ink-hover:#2A2F34;
+  --graphite:#50565C;
+  --line:rgba(20,23,26,.14);
+  --copper:#B87333;
+  --copper-deep:#8A5220;
+  --f-display:"Archivo", "Helvetica Neue", Arial, sans-serif;
+  --f-mono:"IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  --ease:cubic-bezier(.23,1,.32,1);
+  --gutter:16px;
+}
+@media (min-width:768px){:root{--gutter:40px}}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-tap-highlight-color:transparent;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f-display);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+p{margin:0}
+h1,h2{margin:0;font-weight:800;text-wrap:balance}
+a,button{touch-action:manipulation}
+:focus-visible{outline:2px solid var(--copper);outline-offset:3px}
+::selection{background:var(--copper);color:var(--ink)}
+.wrap{max-width:1320px;margin:0 auto;padding-inline:max(var(--gutter),env(safe-area-inset-left,0px)) max(var(--gutter),env(safe-area-inset-right,0px))}
+
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:72px;padding-top:env(safe-area-inset-top,0px);border-bottom:1px solid var(--ink)}
+.brand{padding-block:8px;font-weight:800;font-stretch:118%;letter-spacing:-.02em;font-size:19px;text-decoration:none;white-space:nowrap}
+.back{font-family:var(--f-mono);font-size:13px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;min-height:44px;white-space:nowrap}
+.back svg{width:12px;height:12px}
+@media (hover:hover) and (pointer:fine){.back:hover{color:var(--copper-deep)}}
+
+.head{display:grid;gap:16px;padding-block:64px 48px}
+@media (min-width:1024px){.head{grid-template-columns:minmax(0,2fr) minmax(0,10fr);gap:20px;padding-block:88px 64px}}
+@media (min-width:1024px){.head-main{grid-column:2}}
+.head h1{font-size:clamp(40px,5.4vw,78px);font-stretch:112%;letter-spacing:-.035em;line-height:.98}
+.head p{color:var(--graphite);max-width:52ch;margin-top:16px}
+.count{font-family:var(--f-mono);font-size:13px;color:var(--graphite);margin-top:20px}
+
+.list{list-style:none;margin:0;padding:0;border-top:2px solid var(--ink)}
+.item{display:grid;gap:24px;padding-block:32px;border-bottom:1px solid var(--line)}
+@media (min-width:900px){.item{grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:40px;padding-block:40px}}
+.item.noimg{grid-template-columns:minmax(0,1fr)}
+@media (min-width:900px){.item.noimg .body{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:40px}}
+.photo{margin:0;border:1px solid var(--ink);background:var(--steel);aspect-ratio:4/3;overflow:hidden}
+.photo img{width:100%;height:100%;object-fit:cover;filter:saturate(.72) contrast(1.02)}
+.photo a{display:block;height:100%}
+.body{display:flex;flex-direction:column;gap:18px;min-width:0}
+.item h2{font-size:clamp(24px,2.4vw,34px);font-stretch:112%;letter-spacing:-.025em;line-height:1.08}
+.tag{display:inline-block;justify-self:start;align-self:flex-start;font-family:var(--f-mono);font-size:11px;letter-spacing:.12em;padding:4px 8px;background:var(--copper);color:var(--ink);text-transform:uppercase}
+.data{margin:0;display:grid;grid-template-columns:minmax(0,11ch) minmax(0,1fr);font-family:var(--f-mono);font-size:14px;border-top:1px solid var(--ink)}
+.data dt,.data dd{margin:0;padding:10px 0;border-bottom:1px solid var(--line)}
+.data dt{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--graphite);padding-top:13px}
+.data dd{font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+.text{max-width:58ch}
+
+.empty{border:1px solid var(--ink);background:var(--steel);padding:clamp(24px,4vw,48px);display:grid;gap:20px;max-width:760px}
+.empty b{font-size:clamp(22px,2.2vw,30px);font-stretch:112%;letter-spacing:-.02em;line-height:1.15}
+.empty p{color:var(--graphite);max-width:52ch}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;height:48px;padding:0 22px;background:var(--ink);color:var(--paper);text-decoration:none;font:600 15px/1 var(--f-display);align-self:flex-start;justify-self:start;-webkit-user-select:none;user-select:none;transition:background-color .2s var(--ease),transform .12s var(--ease)}
+.btn:active{transform:translateY(1px)}
+@media (hover:hover) and (pointer:fine){.btn:hover{background:var(--ink-hover)}}
+@media (prefers-reduced-motion:reduce){.btn:active{transform:none}}
+
+.foot{margin-top:clamp(64px,10vw,136px);border-top:1px solid var(--ink);padding-block:28px calc(28px + env(safe-area-inset-bottom,0px));display:grid;gap:16px;font-family:var(--f-mono);font-size:13px;color:var(--graphite)}
+@media (min-width:900px){.foot{grid-template-columns:minmax(0,1fr) auto auto;align-items:center;gap:32px}}
+.foot b{font-family:var(--f-display);font-weight:800;font-stretch:118%;font-size:16px;letter-spacing:-.02em;color:var(--ink)}
+.foot ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px 24px}
+.foot a{text-decoration:none;display:inline-flex;align-items:center;min-height:44px;transition:color .15s ease}
+.foot a[aria-current]{color:var(--ink)}
+@media (hover:hover) and (pointer:fine){.foot a:hover{color:var(--ink)}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="nav">
+    <a class="brand" href="index.html">D&amp;D Transformers</a>
+    <a class="back" href="index.html"><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M11 6H2M5 2L1 6l4 4" stroke="currentColor" stroke-width="1.4"/></svg>Till startsidan</a>
+  </header>
+
+  <main>
+    <div class="head">
+      <div class="head-main">
+        <h1>Projekt</h1>
+        <p>Leveranser och uppdrag, med bilder och korta beskrivningar.</p>
+        <p class="count" id="count" hidden></p>
+      </div>
+    </div>
+    <div id="projekt"></div>
+  </main>
+
+  <footer class="foot">
+    <b>D&amp;D Transformers</b>
+    <ul aria-label="Länkar">
+      <li><a href="index.html#kontakt">Kontakt</a></li>
+      <li><a href="projekt.html" aria-current="page">Projekt</a></li>
+      <li><a href="https://kolektor-etra.se" target="_blank" rel="noopener">kolektor-etra.se</a></li>
+      <li><a href="https://swedish.wayonenergy.com" target="_blank" rel="noopener">swedish.wayonenergy.com</a></li>
+    </ul>
+    <span>Åkersberga © 2026</span>
+  </footer>
+</div>
+
+<script src="projekt.js"></script>
+<script>
+(function(){
+  var mount = document.getElementById('projekt');
+  var count = document.getElementById('count');
+  var data = Array.isArray(window.PROJEKT) ? window.PROJEKT.filter(function(p){ return p && p.titel; }) : [];
+
+  function el(tag, cls, text){
+    var n = document.createElement(tag);
+    if (cls) n.className = cls;
+    if (text != null) n.textContent = text;
+    return n;
+  }
+  function val(v){ return (v == null ? '' : String(v)).trim(); }
+
+  if (!data.length) {
+    var box = el('div','empty');
+    box.appendChild(el('b', null, 'Inga projekt upplagda än.'));
+    box.appendChild(el('p', null, 'Här visas leveranser och uppdrag med bild och kort beskrivning när de läggs till. Vill ni veta mer om tidigare leveranser, fråga Jukka.'));
+    var a = el('a','btn','Kontakta Jukka');
+    a.href = 'index.html#kontakt';
+    box.appendChild(a);
+    mount.appendChild(box);
+    return;
+  }
+
+  data.sort(function(a,b){ return (parseInt(val(b.ar),10)||0) - (parseInt(val(a.ar),10)||0); });
+  count.hidden = false;
+  count.textContent = data.length === 1 ? '1 projekt' : data.length + ' projekt';
+
+  var list = el('ol','list');
+  data.forEach(function(p){
+    var li = el('li','item');
+    var bild = val(p.bild);
+    if (bild) {
+      var fig = el('figure','photo');
+      var link = el('a');
+      link.href = bild; link.target = '_blank'; link.rel = 'noopener';
+      link.setAttribute('aria-label', 'Visa bilden större: ' + val(p.titel));
+      var img = el('img');
+      img.src = bild; img.alt = val(p.alt) || val(p.titel);
+      img.loading = 'lazy'; img.decoding = 'async'; img.width = 1600; img.height = 1200;
+      link.appendChild(img); fig.appendChild(link); li.appendChild(fig);
+    } else {
+      li.classList.add('noimg');
+    }
+    var body = el('div','body');
+    var titleWrap = el('div');
+    titleWrap.style.display = 'grid'; titleWrap.style.gap = '12px'; titleWrap.style.alignContent = 'start';
+    if (p.exempel) titleWrap.appendChild(el('span','tag','Exempel'));
+    titleWrap.appendChild(el('h2', null, val(p.titel)));
+    body.appendChild(titleWrap);
+
+    var right = el('div');
+    right.style.display = 'grid'; right.style.gap = '18px'; right.style.minWidth = '0';
+    var rows = [['År',p.ar],['Plats',p.plats],['Kund',p.kund],['Tillverkare',p.tillverkare],['Effekt',p.effekt],['Spänning',p.spanning]];
+    var dl = el('dl','data'), any = false;
+    rows.forEach(function(r){
+      if (!val(r[1])) return;
+      any = true;
+      dl.appendChild(el('dt', null, r[0]));
+      dl.appendChild(el('dd', null, val(r[1])));
+    });
+    if (any) right.appendChild(dl);
+    if (val(p.text)) right.appendChild(el('p','text', val(p.text)));
+    body.appendChild(right);
+    li.appendChild(body);
+    list.appendChild(li);
+  });
+  mount.appendChild(list);
+})();
+</script>
+</body>
+</html>
